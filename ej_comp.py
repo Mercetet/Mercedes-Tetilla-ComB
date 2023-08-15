@@ -60,6 +60,6 @@ print(f"{minusculas}")
 
 #Ejercicio 16
 mayus = nombre[0]
-resto = nombre [1, 2, 3, 4, 5, 6, 7]
+resto = nombre[1] + nombre[2] + nombre[3] + nombre[4] + nombre[5] + nombre[6] + nombre[7]
 minus = resto.lower()
 print(mayus + minus)
