@@ -59,7 +59,4 @@ minusculas = nombre.lower()
 print(f"{minusculas}")
 
 #Ejercicio 16
-mayus = nombre[0]
-resto = nombre[1] + nombre[2] + nombre[3] + nombre[4] + nombre[5] + nombre[6] + nombre[7]
-minus = resto.lower()
-print(mayus + minus)
+print(nombre.title())
