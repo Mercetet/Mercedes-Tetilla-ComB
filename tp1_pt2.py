@@ -132,10 +132,9 @@ print(f"El numero invertido es: {num[1]}{num[0]}")
 numero1 = float(input("Ingrese el numero A: "))
 numero2 = float(input("Ingrese el numero B: "))
 
-a = numero2
-b= numero1
+numero1, numero2 = numero2, numero1
 
-print(f"El nuevo valor de ambas variables es: variabe A: {a}, variable B: {b}")
+print(f"El nuevo valor de ambas variables es: variabe A: {numero1}, variable B: {numero2}")
 
 #15.	Un ciclista parte de una ciudad A a las HH horas, MM minutos y SS segundos. El tiempo de viaje hasta llegar a otra ciudad B es de T segundos. Escribir un algoritmo que determine la hora de llegada a la ciudad B.
 print("Ingrese la hora, minuto y segundo de salida: ")
