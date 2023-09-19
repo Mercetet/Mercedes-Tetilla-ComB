@@ -8,3 +8,15 @@ def add_digits(n):
         auxd += digit
         n //= 10
     return add
+
+def most(a,b): 
+    if (a>b): 
+        return a
+    else: 
+        return b 
+
+def least(a,b): 
+    if(a < b):
+        return a
+    else: 
+        return b 
