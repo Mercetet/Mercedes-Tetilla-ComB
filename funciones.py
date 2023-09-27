@@ -20,3 +20,14 @@ def least(a,b):
         return a
     else: 
         return b 
+
+#Funciones ahorcado:
+
+def guess(word, guess):
+    display = ""
+    for letter in word:
+        if letter in guess:
+            display += letter
+        else:
+            display += "_"
+    return display
