@@ -116,3 +116,49 @@ def list_func(list1, multi):
         num = multi(i)
         ans.append(num)
     return ans
+
+#12
+def long_phrase(phrase):
+    split = phrase.split()
+    dicc = {i : len(i) for i in split}
+    return dicc
+
+#13
+def hypo(A, B):
+    hypo = math.floor(math.sqrt(math.pow(A,2) + math.pow(B,2)))
+    return hypo
+
+#14
+def prime(num):
+    prime = True
+    for i in range(2, num // 2 + 1):
+        if num % i == 0:
+            prime = False
+            break
+    return prime
+
+#15
+def factorial(num):
+    aux = 1
+    for i in range(1, num + 1):
+        aux *= i
+    return aux
+
+#16
+def serch_dig(num, dig):
+    count = 0
+    num_str=str(num)
+    for i in num_str:
+        if int(i) == dig:
+            count += 1
+    return count
+
+#17
+def sum_dig(num):
+    add = 0
+    num2 = num    
+    while num2 > 0:
+        dig = num2 % 10
+        add += dig
+        num2 //= 10
+    return add

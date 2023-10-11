@@ -84,18 +84,50 @@ import funciones
 # dicc = {"200" : "25", "1000" : "50", "100" : "5", "500" : "40"}
 
 # 11.	Escribir una función que reciba otra función y una lista, y devuelva otra lista con el resultado de aplicar la función dada a cada uno de los elementos de la lista.
-list1=[10,20,30,40,50]
-list2= funciones.list_func(list1, funciones.multi)
-print(list2)
+# list1=[10,20,30,40,50]
+# list2= funciones.list_func(list1, funciones.multi)
+# print(list2)
 
 # 12.	Escribir una función que reciba una frase y devuelva un diccionario con las palabras que contiene y su longitud.
+# phrase = input("Ingrese una frase.")
+# print(funciones.long_phrase(phrase))
 
 # 13.	Escribir una función que calcule el módulo de un vector.
+# cath = int(input("Ingrese el cateto A."))
+# cath2 = int(input("Ingrese el cateto B."))
+# print(funciones.hypo(cath, cath2))
 
 # 14.	Requerir al usuario que ingrese un número entero e informar si es primo o no, utilizando una función booleana que lo decida.
+# num = int(input("Ingrese un numero entero."))
+# print(funciones.prime(num))
 
 # 15.	Escribir un programa que pida números al usuario, motrar el factorial de cada uno y, al finalizar, la cantidad total de números leídos en total. Utilizar una o más funciones, según sea necesario.
+# num = int(input("Ingrese un numero."))
+# print(funciones.factorial(num))
 
 # 16.	Solicitar al usuario un número entero y luego un dígito. Informar la cantidad de ocurrencias del dígito en el número, utilizando para ello una función que calcule la frecuencia.
+# num = input("Ingrese un numero.")
+# dig = input("Ingrese un digito.")
+# print(funciones.serch_dig(num, dig))
 
 # 17.	Solicitar al usuario el ingreso de números primos. La lectura finalizará cuando ingrese un número que no sea primo. Por cada número, mostrar la suma de sus dígitos. También solicitar al usuario un dígito e informar la cantidad de veces que aparece en el número (frecuencia). Al finalizar el programa, mostrar el factorial del mayor número ingresado.
+top = 0
+
+while True:
+    prime = int(input("Ingrese un numero primo (numero no primo para finalizar.): "))
+    if prime <= 1:
+        break
+    if funciones.prime(prime):
+        if prime > top:
+            top = prime
+        
+        print(f"La suma de los digitos en {prime} es: {funciones.sum_dig(prime)}.")
+        dig=int(input("Ingrese un digito: "))
+        count = funciones.serch_dig(prime, dig)
+        print(f"El digito {dig} aparece {count} veces en {prime}.")
+    else:
+        print("Saliendo del programa...")
+        break
+
+print(f"El factorial de {top} es: {funciones.factorial(top)}.")
+

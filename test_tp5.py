@@ -21,7 +21,7 @@ import funciones
 #     ("Chau", 4),
 # ])
 
-# def test_comprobation(word, exp):
+# def test_word_lenght(word, exp):
 #     assert funciones.word_lenght(word)==exp
 
 #3
@@ -32,7 +32,7 @@ import funciones
 #     ("Lydia Martin", 0, "09384934", "Lydia", "093"),
 # ])
 
-# def test_comprobation(info, pos, dni, exp, exp2):
+# def test_wordselector(info, pos, dni, exp, exp2):
 #     assert funciones.wordselector(info, pos)==exp
 #     assert funciones.three_first_dni(dni)==exp2
 
@@ -46,7 +46,7 @@ import funciones
 #     (-13, 0, -6.5),
 # ])
 
-# def test_comprobation(min, max, exp):
+# def test_temperature(min, max, exp):
 #     assert funciones.temperature(min, max)==exp
 
 #6
@@ -57,7 +57,7 @@ import funciones
 #     ("Void", "V o i d "),
 # ])
 
-# def test_comprobation(phrase, exp):
+# def test_spaces(phrase, exp):
 #     assert funciones.spaces(phrase)==exp
 
 #7
@@ -68,7 +68,7 @@ import funciones
 #     ([4,3,2,1], 1, 4),
 # ])
 
-# def test_comprobation(nums, max, min):
+# def test_min_max(nums, max, min):
 #     assert funciones.min_max(nums)==(min,max)
 
 #8
@@ -79,7 +79,7 @@ import funciones
 #     (4, 157, 25),
 # ])
 
-# def test_comprobation(radio, area, peri):
+# def test_area_per_circle(radio, area, peri):
 #     assert funciones.area_per_circle(radio)==(area, peri)
 
 #9
@@ -90,15 +90,84 @@ import funciones
 #     ("pepe", "void", False),
 # ])
 
-# def test_comprobation(user, password, exp):
+# def test_login(user, password, exp):
 #     assert funciones.login(user, password, 0)== exp
 
 #10!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #11
-@pytest.mark.parametrize("num, list1, ans, ans2", [
-    (2, [1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [2, 4, 6, 8, 10]),
+# @pytest.mark.parametrize("list1, fc, ans", [
+#     ([1, 2, 3, 4, 5], funciones.multi, [2, 4, 6, 8, 10]),
+#     ([10, 20, 30, 40, 50], funciones.multi, [20, 40, 60, 80, 100]),
+#     ([14, 5, 11, 23, 12], funciones.multi, [28, 10, 22, 46, 24]),
+#     ([64, 93, 24], funciones.multi, [128, 186, 48]),
+# ])
+
+# def test_list_func(list1, fc, ans):
+#     assert funciones.list_func(list1, fc) == ans
+
+#12
+# @pytest.mark.parametrize("phrase, exp",[
+#     ("Hola mundo", ({"Hola": 4, "mundo": 5})),
+#     ("Chau", ({"Chau": 4})),
+#     ("Me llamo mercedes", ({"Me": 2, "llamo": 5, "mercedes":8})),
+#     ("La materia es programacion", ({"La": 2, "materia": 7, "es": 2, "programacion":12})),
+# ])
+
+# def test_long_phrase(phrase, exp):
+#     assert funciones.long_phrase(phrase)== exp
+
+#13
+# @pytest.mark.parametrize("A, B, H",[
+#     (9, 3, 9),
+#     (122, 12, 122),
+#     (3, 88, 88),
+#     (4, 157, 157),
+# ])
+
+# def test_hypo(A, B, H):
+#     assert funciones.hypo(A,B)==H
+
+#14
+# @pytest.mark.parametrize("num, exp",[
+#     (9, False),
+#     (122, False),
+#     (3, True),
+#     (2, True),
+# ])
+
+# def test_prime(num, exp):
+#     assert funciones.prime(num)== exp
+
+#15
+# @pytest.mark.parametrize("num, exp",[
+#     (5, 120),
+#     (9, 362880),
+#     (3, 6),
+#     (2, 2),
+# ])
+
+# def test_factorial(num, exp):
+#     assert funciones.factorial(num)== exp
+
+#16
+# @pytest.mark.parametrize("num, dig, exp",[
+#     (98984, 9, 2),
+#     (111111, 1, 6),
+#     (21345, 4, 1),
+#     (352423, 2, 2),
+# ])
+
+# def test_serch_dig(num, dig, exp):
+#     assert funciones.serch_dig(num, dig) == exp
+
+#17
+@pytest.mark.parametrize("num, exp",[
+    (98, 17),
+    (111111, 6),
+    (21345, 15),
+    (35, 8),
 ])
-def test_comprobation(num, list1, ans, ans2):
-    resultado = funciones.list_func(list1, funciones.multi(num))
-    assert resultado == ans
+
+def test_sum_dig(num, exp):
+    assert funciones.sum_dig(num) == exp
