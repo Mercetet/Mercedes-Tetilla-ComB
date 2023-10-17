@@ -1,4 +1,5 @@
 import math
+import random
 
 def add_digits(n):
     auxd = 0
@@ -162,3 +163,27 @@ def sum_dig(num):
         add += dig
         num2 //= 10
     return add
+
+#Recursion
+def random_paths(count):
+    paths = [1,2,3]
+    path = random.choice(paths)
+    print(f"Eligio el camino: {path}")
+    if path == 1:
+        print("3 minutos despues...")
+        count += 3
+        return random_paths(count)
+    elif path == 2:
+        print("5 minutos despues...")
+        count += 5
+        return random_paths(count)
+    elif path==3:
+        print("7 minutos despues...")
+        count += 7
+        return count
+
+def f(n):
+    s = str(n)
+    if len(s) <= 1:
+        return s
+    return s [-1] + f(int(s[:-1]))
