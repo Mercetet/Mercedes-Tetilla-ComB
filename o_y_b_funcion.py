@@ -29,6 +29,20 @@ def insert(arr):
             arr[j + 1] = aux
     return arr
 
+def counting(arr):
+    max_arr = max(arr)
+    min_arr = min(arr)
+    count = [0] * (max_arr - min_arr + 1)
+
+    for i in arr:
+        count[i - min_arr] += 1
+
+    final = []
+    for i, count2 in enumerate(count):
+        final.extend([i + min_arr] * count2)
+
+    return final
+
 def merge(arr):
     if len(arr) > 1:
         mid = len(arr) // 2
